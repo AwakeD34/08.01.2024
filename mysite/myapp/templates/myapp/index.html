@@ -1,18 +1,16 @@
 {% load static %}
 <html>
     <head>
-        <link rel="stylesheet" href="{% static 'myapp/style.css' %}"> 
+        <link rel="stylesheet" href="{% static 'myapp/styles.css' %}"> 
     </head>
 
-    <body>
+    <body class="bg-sky-500">
         <h1>Информация о товарах: </h1>
         {% for item in items %}
         <a href="{% url 'myapp:detail' item.id %}">
         ID: {{item.id}} | Название: {{item.name}} | Цена: {{item.price}} | Описание: {{item.description}} <br>
         </a>
         {% endfor %}
-
-
     </body>
 
 
